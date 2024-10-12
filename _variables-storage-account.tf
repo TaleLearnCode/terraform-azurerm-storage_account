@@ -171,15 +171,14 @@ variable "queue_logging_properties" {
 }
 
 variable "file_share_cors_rules" {
-  type = list(object({
+  type = object({
     allowed_headers    = list(string)
     allowed_methods    = list(string)
     allowed_origins    = list(string)
     exposed_headers    = list(string)
     max_age_in_seconds = number
   })
-  )
-  default = []
+  default = null
   description = "The list of CORS Rules for the File Share." 
 }
 
