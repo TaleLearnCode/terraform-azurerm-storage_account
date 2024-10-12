@@ -11,7 +11,6 @@ module "naming" {
   environment    = var.environment
 }
 
-
 resource "azurerm_storage_account" "target" {
   name                = module.naming.resource_name
   resource_group_name = var.resource_group_name
